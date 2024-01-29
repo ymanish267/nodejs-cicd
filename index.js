@@ -37,4 +37,8 @@ app.use(
   swaggerUi.setup(specs, { explorer: true })
 );
 
+app.get("/api",(req,res,next)=>{
+    res.json({message:"Hello from server"})
+})
+
 app.listen(8000,()=>console.log("server is running at 8000"))
